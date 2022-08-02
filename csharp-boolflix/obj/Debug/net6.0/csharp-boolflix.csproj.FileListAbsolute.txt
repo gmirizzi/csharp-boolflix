@@ -1,0 +1,8 @@
+C:\Users\Giuseppe Mirizzi\source\repos\csharp-boolflix\csharp-boolflix\obj\Debug\net6.0\csharp-boolflix.csproj.AssemblyReference.cache
+C:\Users\Giuseppe Mirizzi\source\repos\csharp-boolflix\csharp-boolflix\obj\Debug\net6.0\csharp-boolflix.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Giuseppe Mirizzi\source\repos\csharp-boolflix\csharp-boolflix\obj\Debug\net6.0\csharp-boolflix.AssemblyInfoInputs.cache
+C:\Users\Giuseppe Mirizzi\source\repos\csharp-boolflix\csharp-boolflix\obj\Debug\net6.0\csharp-boolflix.AssemblyInfo.cs
+C:\Users\Giuseppe Mirizzi\source\repos\csharp-boolflix\csharp-boolflix\obj\Debug\net6.0\csharp-boolflix.csproj.CoreCompileInputs.cache
+C:\Users\Giuseppe Mirizzi\source\repos\csharp-boolflix\csharp-boolflix\obj\Debug\net6.0\csharp-boolflix.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Giuseppe Mirizzi\source\repos\csharp-boolflix\csharp-boolflix\obj\Debug\net6.0\csharp-boolflix.RazorAssemblyInfo.cache
+C:\Users\Giuseppe Mirizzi\source\repos\csharp-boolflix\csharp-boolflix\obj\Debug\net6.0\csharp-boolflix.RazorAssemblyInfo.cs

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Giuseppe Mirizzi\\Source\\Repos\\csharp-boolflix\\csharp-boolflix\\csharp-boolflix.csproj": {}
+    "C:\\Users\\Giuseppe Mirizzi\\source\\repos\\csharp-boolflix\\csharp-boolflix\\csharp-boolflix.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Giuseppe Mirizzi\\Source\\Repos\\csharp-boolflix\\csharp-boolflix\\csharp-boolflix.csproj": {
+    "C:\\Users\\Giuseppe Mirizzi\\source\\repos\\csharp-boolflix\\csharp-boolflix\\csharp-boolflix.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Giuseppe Mirizzi\\Source\\Repos\\csharp-boolflix\\csharp-boolflix\\csharp-boolflix.csproj",
+        "projectUniqueName": "C:\\Users\\Giuseppe Mirizzi\\source\\repos\\csharp-boolflix\\csharp-boolflix\\csharp-boolflix.csproj",
         "projectName": "csharp-boolflix",
-        "projectPath": "C:\\Users\\Giuseppe Mirizzi\\Source\\Repos\\csharp-boolflix\\csharp-boolflix\\csharp-boolflix.csproj",
+        "projectPath": "C:\\Users\\Giuseppe Mirizzi\\source\\repos\\csharp-boolflix\\csharp-boolflix\\csharp-boolflix.csproj",
         "packagesPath": "C:\\Users\\Giuseppe Mirizzi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Giuseppe Mirizzi\\Source\\Repos\\csharp-boolflix\\csharp-boolflix\\obj\\",
+        "outputPath": "C:\\Users\\Giuseppe Mirizzi\\source\\repos\\csharp-boolflix\\csharp-boolflix\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Giuseppe Mirizzi\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -39,6 +39,18 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.7, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[6.0.7, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
