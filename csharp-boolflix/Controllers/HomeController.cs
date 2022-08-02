@@ -15,7 +15,11 @@ namespace csharp_boolflix.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            using (BoolflixDbContext context = new BoolflixDbContext())
+            {
+                IQueryable<Film> films = context.Films;
+                return View(films.ToList());
+            }
         }
 
         public IActionResult Privacy()

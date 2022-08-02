@@ -6,7 +6,7 @@ namespace csharp_boolflix.Models
     public class Film : Content
     {
         public int Duration { get; set; }
-        public List<Genre> GenresList { get; set; }
-        public List<Language> LanguagesList { get; set; }
+        public List<Genre>? GenresList { get; set; }
+        public List<Language>? LanguagesList { get; set; }
     }
 }
