@@ -5,5 +5,6 @@ namespace csharp_boolflix.Models
     [Table("series")]
     public class Serie : Content
     {
+        public List<Genre> GenresList { get; set; }
     }
 }

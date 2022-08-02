@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using csharp_boolflix;
 
@@ -10,9 +11,10 @@ using csharp_boolflix;
 namespace csharp_boolflix.Migrations
 {
     [DbContext(typeof(BoolflixDbContext))]
-    partial class BoolflixDbContextModelSnapshot : ModelSnapshot
+    [Migration("20220802103111_GenresTable")]
+    partial class GenresTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -87,66 +89,6 @@ namespace csharp_boolflix.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("series");
-                });
-
-            modelBuilder.Entity("FilmGenre", b =>
-                {
-                    b.Property<int>("FilmsListId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("GenresListId")
-                        .HasColumnType("int");
-
-                    b.HasKey("FilmsListId", "GenresListId");
-
-                    b.HasIndex("GenresListId");
-
-                    b.ToTable("FilmGenre");
-                });
-
-            modelBuilder.Entity("GenreSerie", b =>
-                {
-                    b.Property<int>("GenresListId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("SeriesListId")
-                        .HasColumnType("int");
-
-                    b.HasKey("GenresListId", "SeriesListId");
-
-                    b.HasIndex("SeriesListId");
-
-                    b.ToTable("GenreSerie");
-                });
-
-            modelBuilder.Entity("FilmGenre", b =>
-                {
-                    b.HasOne("csharp_boolflix.Models.Film", null)
-                        .WithMany()
-                        .HasForeignKey("FilmsListId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("csharp_boolflix.Models.Genre", null)
-                        .WithMany()
-                        .HasForeignKey("GenresListId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
-            modelBuilder.Entity("GenreSerie", b =>
-                {
-                    b.HasOne("csharp_boolflix.Models.Genre", null)
-                        .WithMany()
-                        .HasForeignKey("GenresListId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("csharp_boolflix.Models.Serie", null)
-                        .WithMany()
-                        .HasForeignKey("SeriesListId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
                 });
 #pragma warning restore 612, 618
         }
