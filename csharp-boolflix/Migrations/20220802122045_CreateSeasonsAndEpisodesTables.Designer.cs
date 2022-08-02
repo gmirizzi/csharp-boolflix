@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using csharp_boolflix;
 
@@ -10,9 +11,10 @@ using csharp_boolflix;
 namespace csharp_boolflix.Migrations
 {
     [DbContext(typeof(BoolflixDbContext))]
-    partial class BoolflixDbContextModelSnapshot : ModelSnapshot
+    [Migration("20220802122045_CreateSeasonsAndEpisodesTables")]
+    partial class CreateSeasonsAndEpisodesTables
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

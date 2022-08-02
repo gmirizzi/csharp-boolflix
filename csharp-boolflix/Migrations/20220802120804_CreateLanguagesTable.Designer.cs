@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using csharp_boolflix;
 
@@ -10,9 +11,10 @@ using csharp_boolflix;
 namespace csharp_boolflix.Migrations
 {
     [DbContext(typeof(BoolflixDbContext))]
-    partial class BoolflixDbContextModelSnapshot : ModelSnapshot
+    [Migration("20220802120804_CreateLanguagesTable")]
+    partial class CreateLanguagesTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -20,35 +22,6 @@ namespace csharp_boolflix.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
-
-            modelBuilder.Entity("csharp_boolflix.Models.Episode", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
-
-                    b.Property<string>("Description")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<int>("Number")
-                        .HasColumnType("int");
-
-                    b.Property<int>("SeasonId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Title")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("SeasonId");
-
-                    b.ToTable("episodes");
-                });
 
             modelBuilder.Entity("csharp_boolflix.Models.Film", b =>
                 {
@@ -109,27 +82,6 @@ namespace csharp_boolflix.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("languages");
-                });
-
-            modelBuilder.Entity("csharp_boolflix.Models.Season", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
-
-                    b.Property<int>("Number")
-                        .HasColumnType("int");
-
-                    b.Property<int>("SerieId")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("SerieId");
-
-                    b.ToTable("seasons");
                 });
 
             modelBuilder.Entity("csharp_boolflix.Models.Serie", b =>
@@ -216,28 +168,6 @@ namespace csharp_boolflix.Migrations
                     b.ToTable("LanguageSerie");
                 });
 
-            modelBuilder.Entity("csharp_boolflix.Models.Episode", b =>
-                {
-                    b.HasOne("csharp_boolflix.Models.Season", "Season")
-                        .WithMany("EpisodesList")
-                        .HasForeignKey("SeasonId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Season");
-                });
-
-            modelBuilder.Entity("csharp_boolflix.Models.Season", b =>
-                {
-                    b.HasOne("csharp_boolflix.Models.Serie", "Serie")
-                        .WithMany()
-                        .HasForeignKey("SerieId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Serie");
-                });
-
             modelBuilder.Entity("FilmGenre", b =>
                 {
                     b.HasOne("csharp_boolflix.Models.Film", null)
@@ -296,11 +226,6 @@ namespace csharp_boolflix.Migrations
                         .HasForeignKey("SeriesListId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-                });
-
-            modelBuilder.Entity("csharp_boolflix.Models.Season", b =>
-                {
-                    b.Navigation("EpisodesList");
                 });
 #pragma warning restore 612, 618
         }
