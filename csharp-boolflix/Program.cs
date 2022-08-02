@@ -1,4 +1,8 @@
+using csharp_boolflix;
+
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddScoped<BoolflixDbContext>();
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
