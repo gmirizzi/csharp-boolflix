@@ -10,5 +10,7 @@ namespace csharp_boolflix.Models
         public int Id { get; set; }
         public List<Film> FilmsList { get; set; }
         public List<Serie> SeriesList { get; set; }
+        public Profile Profile { get; set; }
+        public int ProfileId { get; set; }
     }
 }
