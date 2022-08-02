@@ -7,5 +7,6 @@ namespace csharp_boolflix.Models
     {
         public List<Genre> GenresList { get; set; }
         public List<Language> LanguagesList { get; set; }
+        public List<History>? HistoriesList { get; set; }
     }
 }
